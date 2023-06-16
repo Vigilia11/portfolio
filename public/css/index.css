@@ -1,0 +1,106 @@
+body{
+	font-size: 13px;
+	font-family: sans-serif;
+}
+#navigation{
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 20;
+}
+
+#home > div > div > div> div > .display{
+	height: 300px;
+	border-radius: 30px;
+	opacity: 0;
+	animation: show-content 1s 2s forwards;
+}
+.designer{
+	background-color: black;
+	left: -550px;
+	top: 40px;
+	/* margin-left: -1200px; */
+	animation: designer 2s 3s forwards;
+}
+.developer{
+	background-color: #f3f4f6;
+	right: -550px;
+	bottom: 40px;
+	/* margin-right: -1200px; */
+	animation: developer 2s 3s forwards;
+}
+.and{
+	opacity: 0;
+	animation: and 2s 3s forwards;
+}
+@keyframes and {
+	0% { opacity: 0; }
+	25% { opacity: 0.25; }
+	50% { opacity: 0.5; }
+	75% { opacity: 0.75; }
+	100% { opacity: 1; }
+}
+@keyframes designer {
+	0% { left: -550px; background-color: black; }
+	50% { left: 0; background-color: black; }
+	75% { left: 0; background-color: black; }
+	100% { left: 0; background-color: #1e293b; }
+}
+@keyframes developer {
+	0% {right: -550px; background-color: #f3f4f6; }
+	50% { right: 0; background-color: #f3f4f6;; }
+	75% { right: 0; background-color: #f3f4f6;; }
+	100% { right: 0; background-color: #1e293b; }
+}
+/* #home > div > div > div> div > .display > div > h1:hover{
+	text-shadow: 2px 2px 5px #1f2937, 4px 4px 10px #f3f4f6;
+}
+#home > div > div > div> div > .display > div > h2:hover{
+	text-shadow: 2px 2px 5px #1f2937, 4px 4px 10px #64748b;
+} */
+
+#home > div > div > div > .left{
+	height: 0;
+	background-color: #0f172a;
+	animation: slide-animation 3.5s forwards;
+}
+#home > div > div > div > .right{
+	height: 0;
+	animation: slide-animation 3.5s forwards;
+}
+@keyframes slide-animation {
+	0% { height: 0; background-color: #0f172a; }
+	50% { height: 100%; background-color: #0f172a; }
+	90% { height: 100%; background-color: #0f172a; }
+	100% { height: 100%; background-color: #1e293b; }
+}
+#home > div > div > div > .left > .content > h1{
+	opacity: 0;
+	animation: show-content .75s 1s forwards;
+}
+#home > div > div > div > .left > .content > h2{
+	opacity: 0;
+	animation: show-content .75s 1.75s forwards;
+}
+#home > div > div > div > .left > .content > h3{
+	opacity: 0;
+	animation: show-content .75s 2.5s forwards;
+}
+@keyframes show-content {
+	from { opacity: 0; }
+	50%{ opacity: 0.5; }
+	to { opacity: 1; }
+}
+
+.reveal {
+	position: relative;
+	opacity: 0;
+}
+.reveal.active {
+	opacity: 1;
+  }
+.active {
+	animation: fade 1s ease-in;
+}
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
