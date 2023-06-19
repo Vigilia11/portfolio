@@ -27,6 +27,47 @@ body{
 	/* margin-right: -1200px; */
 	animation: developer 2s 3s forwards;
 }
+
+@media only screen and (max-width:450px){
+	body{
+		font-size: medium;
+	}
+	#navigation{
+		background-color: rgba(0, 0, 0, 0.9);
+	}
+	#sidenav{
+		z-index: 20;
+		background-color: rgba(255, 255, 255, 0.9);
+		border-radius: 15px;
+		width: 140px;
+		transition: 1s;
+		/* width: 140px; */
+		/* width: 0; */
+	}
+	.toggle-sidenav{
+		transform: translateX(-148px);
+	}
+	.toggle-icon-direction{
+		transform: scaleX(-1);
+	}
+
+	#btn-sidenav{
+		width: 40px;
+		height: 40px;
+		background-color: rgba(0, 0, 0, 0.9);
+		z-index: 20;
+	}
+	#home > div > div > div> div > .display{
+		height: 250px;
+		border-radius: 30px;
+	}
+	.designer{
+		top: 30px;
+	}
+	.developer{
+		bottom: 30px;
+	}
+}
 .and{
 	opacity: 0;
 	animation: and 2s 3s forwards;

@@ -1,3 +1,14 @@
+function showNavMenu(){
+    $('#sidnav').toggleClass('hidden');
+}
+function sideNav(){
+    $('#sidenav').toggleClass('toggle-sidenav');
+}
+$('#btn-sidenav').click(function(){
+    $('svg.toggle-icon').toggleClass('toggle-icon-direction');
+});
+
+
 function reveal() {
     var reveals = document.querySelectorAll(".reveal");
   
@@ -19,13 +30,7 @@ window.addEventListener("scroll", reveal);
 
 
 $(window).on('resize scroll', function() {
-    if ($('#work').isInViewport()) {
-        //$('#work').scrollTop(100vh)
-        /* $('html, body').animate({
-            scrollTop: $("#work").offset().top
-        }, 1000); */
-        //console.log("meron")
-        
+    if ($('#work').isInViewport()) {        
         $('#work').find('.work-content').css('animation-play-state', 'running');
         $('#work').find('.w').css('animation-play-state', 'running');
         $('#work').find('.o').css('animation-play-state', 'running');
@@ -41,7 +46,6 @@ $(window).on('resize scroll', function() {
     }
 
     if ($('#about').isInViewport()) {
-        //console.log("meron")
         $('#about').find('div.div-image').css('animation-play-state', 'running');
         $('#about').find('img.profile-picture').css('animation-play-state', 'running');
         $('#about').find('.layer-1').css('animation-play-state', 'running');
@@ -50,7 +54,7 @@ $(window).on('resize scroll', function() {
         $('#about').find('.cover-1').css('animation-play-state', 'running');
         $('#about').find('.cover-2').css('animation-play-state', 'running');
     }
-    else{
+    /* else{
         $('#about').find('div.div-image').css('animation-play-state', 'paused');
         $('#about').find('img.profile-picture').css('animation-play-state', 'paused');
         $('#about').find('.layer-1').css('animation-play-state', 'paused');
@@ -58,10 +62,9 @@ $(window).on('resize scroll', function() {
         $('#about').find('.layer-3').css('animation-play-state', 'paused');
         $('#about').find('.cover-1').css('animation-play-state', 'paused');
         $('#about').find('.cover-2').css('animation-play-state', 'paused');
-    }
+    } */
 
     if ($('#contact').isInViewport()) {
-        //console.log("meron")
         $('#contact').find('.contact').css('animation-play-state', 'running');
         $('#contact').find('.contact-cover').css('animation-play-state', 'running');
         $('#contact').find('.contact-1').css('animation-play-state', 'running');
@@ -71,7 +74,7 @@ $(window).on('resize scroll', function() {
         $('#contact').find('.contact-5').css('animation-play-state', 'running');
         $('#contact').find('.contact-6').css('animation-play-state', 'running');
     }
-    else{
+    /* else{
         $('#contact').find('.contact').css('animation-play-state', 'paused');
         $('#contact').find('.contact-cover').css('animation-play-state', 'paused');
         $('#contact').find('.contact-1').css('animation-play-state', 'paused');
@@ -80,7 +83,7 @@ $(window).on('resize scroll', function() {
         $('#contact').find('.contact-4').css('animation-play-state', 'paused');
         $('#contact').find('.contact-5').css('animation-play-state', 'paused');
         $('#contact').find('.contact-6').css('animation-play-state', 'paused');
-    }
+    } */
 });
 
 $.fn.isInViewport = function() {
